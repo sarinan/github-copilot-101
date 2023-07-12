@@ -8,25 +8,43 @@
       body {
         font-family: "Roboto", sans-serif;
       }
-      /* make navigation bar display flex */
-      .nav-container ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: lightgray;
+      /* make navigation position fix at top */
+      .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
         padding: 20px;
-        font-size: 30px;
-        list-style-type: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
       }
-      /* remove underline */
-      .nav-container ul li a {
-        text-decoration: none;
-      }
-      /* make hover effect and animation */
-      .nav-container ul li a:hover {
+      .nav-container a {
         color: #fff;
-        background-color: #000;
-        transition: 0.5s;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 16px;
+      }
+
+      .nav-container a:hover {
+        color: #ffcc00;
+      }
+
+      .nav-container ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      .nav-container li {
+        margin-right: 10px;
+      }
+
+      .nav-container img {
+        max-width: 40px;
+        height: auto;
+        vertical-align: middle;
       }
       /* remove html default margin */
       * {
