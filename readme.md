@@ -1,16 +1,14 @@
-<!-- create horizontal navagation menu using ul and li include home about contact -->
-/* make navigation bar display flex */
-/* remove html default margin */
-<!-- add banner image from banner.jpg-->
-/* make banner size contain in web width */
-<!-- add video file name chocovideo.mp4 -->
-<!-- biography for ChocoCRM thailand company -->
-/* biography container */
-
-<!-- create slide show ./slide-{number}.png for 4 pictures -->
-/* make slide show size contain in web width */
-script // slide show
-
-/* dark theme */
-/* use google font roboto */
-/* set font family */
+1. <!-- create horizontal navagation menu using ul and li include home about contact -->
+2. /* make navigation bar display flex */
+3. /* remove html default margin */
+4. <!-- add banner image from banner.jpg-->
+5. /* make banner size contain in web width */
+6. <!-- add video file name chocovideo.mp4 -->
+7. <!-- biography for ChocoCRM thailand company -->
+8. /* biography container */
+9. <!-- create slide show ./slide-{number}.png for 4 pictures -->
+10. /* make slide show size contain in web width */
+11. script // slide show
+12. /* dark theme */
+13. /* use google font roboto */
+14. /* set font family */
