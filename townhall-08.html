@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <title>my townhall-08</title>
+    <style>
+      /* using google font thin */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+      /* set font family */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      /* create a nav-container style */
+      .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+      /* hover orange color */
+      .nav-container a:hover {
+        color: #ffcc00;
+      }
+      /* add transition .25 s */
+      .nav-container a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.25s ease-in-out;
+      }
+      /* remove dot in li tag */
+      .nav-container li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      /* remove web default margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* make banner contain in web width */
+      .banner img {
+        width: 100%;
+      }
+      /* create container for bio */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      /* make slide show contain in web width */
+      .slide-show img {
+        width: 100%;
+      }
+      /* web dark theme */
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+      /* create a beautiful card for slide-show-container */
+      .slide-show-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create a navigation bar include Home About Contact -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="townhall-01.html">Home</a></li>
+        <li><a href="townhall-02.html">About</a></li>
+        <li><a href="townhall-03.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner from './banner.png' -->
+    <div class="banner">
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add bio for ChocoCRM company -->
+    <div class="biography">
+      <h1>ChocoCRM</h1>
+      <p>
+        ChocoCRM is a company that provides CRM software for chocolate
+        manufacturers. ChocoCRM is a company that provides CRM software for
+        chocolate manufacturers. ChocoCRM is a company that provides CRM
+        software for chocolate manufacturers. ChocoCRM is a company that
+        provides CRM software for chocolate manufacturers. ChocoCRM is a company
+        that provides CRM software for chocolate manufacturers.
+      </p>
+    </div>
+    <!-- add slide show for ./slide-{number}.png for 4 items -->
+    <div class="slide-show-container">
+      <div class="slide-show">
+        <img src="./slide-1.png" alt="slide-01" />
+        <img src="./slide-2.png" alt="slide-02" />
+        <img src="./slide-3.png" alt="slide-03" />
+        <img src="./slide-4.png" alt="slide-04" />
+      </div>
+    </div>
+    <script>
+      // slide show change page every 1 second
+      let slideIndex = 0;
+      const showSlides = () => {
+        let i;
+        const slides = document.querySelectorAll(".slide-show img");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 1000);
+      };
+      showSlides();
+    </script>
+  </body>
+</html>
