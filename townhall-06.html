@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>my townhall-06</title>
+    <style>
+      /* using google thin font */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+      /* set font family */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* make nav-container horizontal style */
+
+      .nav-container ul {
+        height: 40px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(45, 45, 45);
+      }
+
+      .nav-container li {
+        margin-right: 20px;
+      }
+
+      .nav-container a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .nav-container a:hover {
+        color: #ffcc00;
+        text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+      }
+
+      /* remove web margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* make banner container in web width */
+      .banner img {
+        width: 100%;
+      }
+
+      /* create a container for biography */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      /* create a container for slide-show */
+      .slide-show img {
+        width: 100%;
+      }
+
+      /* make web dark theme */
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create a top navigation for menu Home, About, Contact -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner ./banner.png -->
+    <div class="banner">
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add biography for ChocoCRM company -->
+    <div class="biography">
+      <h1>ChocoCRM</h1>
+      <p>
+        ChocoCRM is a company that provides CRM software for small and medium
+        businesses. We have been in business for over 10 years and have helped
+        thousands of companies grow their business with our software.
+      </p>
+    </div>
+    <!-- add product list slide show from ./slide-{number}.png -->
+    <div class="slide-show">
+      <img src="./slide-1.png" class="slide" alt="slide-01" />
+      <img src="./slide-2.png" class="slide" alt="slide-02" />
+      <img src="./slide-3.png" class="slide" alt="slide-03" />
+    </div>
+
+    <script>
+      // slide show change image every 3 seconds
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <title>townhall-05.html</title>
+    <style>
+      /* generate better font */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+      /* set font family */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      /* make navigation position fix top */
+      .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .nav-container ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-container li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .nav-container a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s ease-in-out;
+      }
+
+      .nav-container a:hover {
+        color: #ffcc00;
+      }
+      /* make banner contain size in web width */
+      .banner img {
+        width: 100%;
+      }
+      /* remove web margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* make biography container */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      /* make slide show contain in web width */
+      .slide-show img {
+        width: 100%;
+      }
+      /* dark theme */
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create horizontak navigation menu using ul and li include home about contact -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner ./banner.png -->
+    <div class="banner">
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add biography for ChocoCRM thailand company -->
+    <div class="biography">
+      <h1>ChocoCRM Thailand</h1>
+      <p>
+        ChocoCRM Thailand is a company that provides CRM software for
+        organizations. We have been in business for over 10 years and have
+        helped many companies grow their business with our products. Our goal is
+        to help you grow your business by providing the best CRM software on the
+        market today!
+      </p>
+    </div>
+    <!-- create a slide show for image from ./slide-{number}.jpg -->
+    <div class="slide-show">
+      <img src="./slide-1.png" class="slide" alt="slide-1" />
+      <img src="./slide-2.png" class="slide" alt="slide-2" />
+      <img src="./slide-3.png" class="slide" alt="slide-3" />
+    </div>
+    <script>
+      // slide show auto change image every 3 seconds
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 1000); // Change image every 3 seconds
+      }
+    </script>
+  </body>
+</html>

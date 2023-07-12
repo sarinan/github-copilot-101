@@ -1,8 +1,8 @@
-Github co-piot script
+# Github co-piot script
 1. create horizontal navagation menu using ul and li include home about contact
-2. /* make navigation position fix at top */
+2. /* make navigation position fix top */
 3. /* remove html default margin */
-4. add banner image from banner.jpg-->
+4. add banner image from banner.png-->
 5. /* make banner size contain in web width */
 6. add video file name chocovideo.mp4
 7. biography for ChocoCRM thailand company
@@ -14,7 +14,7 @@ Github co-piot script
 13. /* use google font roboto */
 14. /* set font family */
 
-Apply GPT for beautiful style
+# Apply GPT for beautiful style
 /* make navigation position fix at top */
       .nav-container {
         position: fixed;
@@ -23,5 +23,4 @@ Apply GPT for beautiful style
         width: 100%;
         background-color: #333;
       }
-
 from above make this more beautiful
