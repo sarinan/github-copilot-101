@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <title>my townhall-09</title>
+    <style>
+      /* use google font roboto thin */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+      /* set font family */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      /* make nav-container display flex */
+      .nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      /* add background grey */
+      .nav-container {
+        background-color: #333;
+      }
+      /* make all item display in horizontal */
+      .nav-container ul {
+        display: flex;
+        gap: 1rem;
+      }
+      /* remove dot in li element */
+      .nav-container li {
+        list-style: none;
+      }
+      /* add hover transition color orange */
+      .nav-container a:hover {
+        color: #ffcc00;
+      }
+      /* add hover transition .25s */
+      .nav-container a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.25s ease-in-out;
+      }
+      /* remove web margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* make banner contain in web width */
+      .banner img {
+        width: 100%;
+      }
+      /* create a container for bio */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      /* make image slide show contain in web width */
+      .slide-show-container img {
+        width: 100%;
+      }
+      /* add dark theme */
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create a navigation bar fix at top contain menu are Home About COntact -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="townhall-01.html">Home</a></li>
+        <li><a href="townhall-02.html">About</a></li>
+        <li><a href="townhall-03.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner ./banner.png -->
+    <div class="banner">
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add web bio for ChocoCRM thailand company -->
+    <div class="biography">
+      <h1>ChocoCRM Thailand</h1>
+      <p>
+        ChocoCRM Thailand is a company that provides CRM software for
+        businesses. We have been in business for over 10 years and have helped
+        many companies grow their customer base with our products. Our goal is
+        to help you grow your business by providing the best CRM software on the
+        market today!
+      </p>
+    </div>
+    <!-- add slide show of product from image ./slide-1.png for 4 items -->
+    <div class="slide-show-container">
+      <img src="./slide-1.png" class="slide" alt="slide-01" />
+      <img src="./slide-2.png" class="slide" alt="slide-02" />
+      <img src="./slide-3.png" class="slide" alt="slide-03" />
+      <img src="./slide-4.png" class="slide" alt="slide-04" />
+    </div>
+    <script>
+      // make slide show change image every 2 seconds
+      let slideIndex = 0;
+      setInterval(() => {
+        slideIndex++;
+        if (slideIndex > 3) {
+          slideIndex = 0;
+        }
+        const slides = document.querySelectorAll(".slide");
+        slides.forEach((slide) => {
+          slide.style.display = "none";
+        });
+        slides[slideIndex].style.display = "block";
+      }, 2000);
+    </script>
+  </body>
+</html>
