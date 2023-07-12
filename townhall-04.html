@@ -1,0 +1,113 @@
+<html>
+  <head>
+    <title>my townhall-04</title>
+    <style>
+      /* use google font roboto */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+      /* set font family */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      /* make navigation bar display flex */
+      .nav-container ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: lightgray;
+        padding: 20px;
+        font-size: 30px;
+      }
+      /* remove html default margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* make banner size contain in web width */
+      .banner img {
+        width: 100%;
+      }
+      /* biography container */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+      /* make slide show size contain in web width */
+      .slide-show {
+        width: 100%;
+      }
+      /* dark theme */
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create horizontal navigation menu using ul and li include home about contac -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="townhall-01.html">Home</a></li>
+        <li><a href="townhall-02.html">About</a></li>
+        <li><a href="townhall-03.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner image from banner.jpg -->
+    <div class="banner">
+      <img src="banner.jpg" alt="banner" />
+    </div>
+    <!-- add video file name chocovideo.mp4 -->
+    <div class="video">
+      <video width="100%" controls>
+        <source src="chocovideo.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <!-- biography for ChocoCRM thailand company -->
+    <div class="biography">
+      <h1>ChocoCRM Thailand</h1>
+      <p>
+        ChocoCRM Thailand is a company that provides CRM software for
+        businesses. The company was founded in 2019 by a group of entrepreneurs
+        who have experience in the CRM business for more than 10 years. The
+        company's mission is to provide CRM software that is suitable for Thai
+        businesses. The company's vision is to be the leading CRM software
+        provider in Thailand.
+      </p>
+    </div>
+    <!-- create slide show ./slide-{number}.png for 4 pictures -->
+    <div class="slide-show">
+      <div class="my-slide">
+        <img src="slide-1.png" alt="slide-1" />
+      </div>
+      <div class="my-slide">
+        <img src="slide-2.png" alt="slide-2" />
+      </div>
+      <div class="my-slide">
+        <img src="slide-3.png" alt="slide-3" />
+      </div>
+      <div class="my-slide">
+        <img src="slide-4.png" alt="slide-4" />
+      </div>
+    </div>
+    <script>
+      // create slide show
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("my-slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+  </body>
+</html>
