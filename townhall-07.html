@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>my townhall-07</title>
+    <style>
+      /* apply google font roboto */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+      /* set font family */
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      /* make navigation bar fix at top position */
+      .nav-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+      .nav-container ul {
+        display: flex;
+        gap: 1rem;
+      }
+      /* remove dot in li */
+      .nav-container li {
+        list-style: none;
+      }
+      /* add hover color change effect */
+      .nav-container a:hover {
+        color: #ffcc00;
+      }
+      /* remove underline */
+      .nav-container a {
+        text-decoration: none;
+      }
+      /* default color gray */
+      .nav-container a {
+        color: #fff;
+      }
+      /* remove web margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* make banner contain in web width */
+      .banner img {
+        width: 100%;
+      }
+      /* make slide contain in web width */
+      .slide-show img {
+        width: 100%;
+      }
+      /* dark theme */
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+      /* create a container for biography */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create a navigation bar at top include pages Home About Contact -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="townhall-01.html">Home</a></li>
+        <li><a href="townhall-02.html">About</a></li>
+        <li><a href="townhall-03.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner from ./banner.png -->
+    <div class="banner">
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add chococrm biography -->
+    <div class="biography">
+      <h1>Chococrm</h1>
+      <p>
+        Chococrm is a company that provides customer relationship management
+        (CRM) software and services. The company is based in San Francisco,
+        California, with offices in New York, Dublin, Sydney, London, Paris,
+        Singapore, Tokyo, Frankfurt, Toronto, Denver, and Indianapolis. It is
+        listed on the New York Stock Exchange with the symbol CRM and is a
+        constituent of the S&P 500 Index.
+      </p>
+    </div>
+    <!-- add production list slide show from images from './slide-1' for 4 pictures -->
+    <div class="slide-show">
+      <img src="./slide-1.png" class="slide" alt="slide-1" />
+      <img src="./slide-2.png" class="slide" alt="slide-2" />
+      <img src="./slide-3.png" class="slide" alt="slide-3" />
+      <img src="./slide-4.png" class="slide" alt="slide-4" />
+    </div>
+    <script>
+      // add slide show change every 3 seconds
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000);
+      }
+    </script>
+  </body>
+</html>
