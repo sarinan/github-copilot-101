@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <title>my townhall</title>
+    <style>
+      /* using google font roboto thin */
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+      /* set font family to roboto thin */
+      body {
+        font-family: "Roboto Thin", sans-serif;
+      }
+      /* add background color black to navigation bar */
+      #nav {
+        background-color: black;
+      }
+      /* remove web margin */
+      body {
+        margin: 0;
+      }
+      /* add padding to navigation bar */
+      #nav ul {
+        padding: 0;
+      }
+      /* make navigation bar display flex */
+      #nav ul {
+        display: flex;
+        gap: 1rem;
+      }
+      /* add hover transition change to color orange */
+      #nav ul li a:hover {
+        color: orange;
+      }
+      /* remove li element dot */
+      #nav ul li {
+        list-style: none;
+      }
+      /* make banner contain in web width */
+      img {
+        width: 100%;
+      }
+      /* bio graphy add card container */
+      div {
+        padding: 1rem;
+      }
+      /* add shadow for biography container */
+      div {
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+      }
+      /* make web dark theme */
+      body {
+        background-color: #333;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create navigation bar at top of page, Home About, Contact-->
+    <div id="nav">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- add banner ./banner.png -->
+    <div>
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add biography for ChocoCRM thailand company -->
+    <div>
+      <h1>ChocoCRM thailand</h1>
+      <p>
+        ChocoCRM thailand is a company that provides CRM software for
+        businesses. We have been in business for over 10 years and have helped
+        many companies grow their customer base. Our goal is to help you grow
+        your business by providing you with the tools you need to succeed. We
+        offer a variety of services including customer relationship management,
+        marketing automation, sales force automation, and more! If you're
+        looking for a way to improve your customer service or increase sales,
+        then we can help! Contact us today for more information on how we can
+        help you reach your goals!
+      </p>
+    </div>
+    <!-- add slide show ./slide-{number}.png for 4 items -->
+    <div>
+      <img src="./slide-1.png" class="slide" alt="slide 1" />
+      <img src="./slide-2.png" class="slide" alt="slide 2" />
+      <img src="./slide-3.png" class="slide" alt="slide 3" />
+      <img src="./slide-4.png" class="slide" alt="slide 4" />
+    </div>
+    <script>
+      // make slide show change auto every 3 seconds
+      let slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+  </body>
+</html>

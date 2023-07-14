@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>my townhall-10</title>
+    <style>
+      /* add background to navigation bar */
+      .nav-container {
+        background-color: #333;
+        height: 50px;
+      }
+      /* remove web margin */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /* make navbar display flex */
+      .nav-container ul {
+        display: flex;
+        gap: 1rem;
+      }
+      /* add font color orange */
+      .nav-container a {
+        color: #ffcc00;
+        text-decoration: none;
+      }
+      /* add hover transition of navbar item */
+      .nav-container a:hover {
+        color: #fff;
+        transition: color 0.25s ease-in-out;
+      }
+      /* remove dot in li element */
+      .nav-container li {
+        list-style: none;
+      }
+      /* make banner contain in web width */
+      .banner img {
+        width: 100%;
+      }
+      /* make dark theme */
+      body {
+        background-color: #333;
+        color: #fff;
+      }
+      /* create cotainer for biography */
+      .biography {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- create navigation bar at top contain of home about contact -->
+    <div class="nav-container">
+      <ul>
+        <li><a href="townhall-01.html">Home</a></li>
+        <li><a href="townhall-02.html">About</a></li>
+        <li><a href="townhall-03.html">Contact</a></li>
+      </ul>
+    </div>
+    <!-- add banner from './banner.png' -->
+    <div class="banner">
+      <img src="./banner.png" alt="banner" />
+    </div>
+    <!-- add ChocoCRM biography from thailand company -->
+    <div class="biography">
+      <h1>ChocoCRM</h1>
+      <p>
+        ChocoCRM is a CRM software that helps you to manage your customer
+        re
+      </p>
+    </div>
+  </body>
+</html>
